@@ -20,7 +20,7 @@
           <li><a href="#band">Band</a></li>
           <li><a href="#tour">Tour</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li>
+          <li class="no-li">
             <a style="cursor: pointer">
               More
               <i class="nav-arrow-down ti-angle-down"></i>
@@ -173,8 +173,16 @@
           <div class="contact-body row">
             <div class="col col-2 infor">
               <p><i class="con-icon ti-location-pin"></i>Chicago, US</p>
-              <p><i class="con-icon ti-mobile"></i>0357511936</p>
-              <p><i class="con-icon ti-email"></i>mkien1005@gmail.com</p>
+              <p>
+                <i class="con-icon ti-mobile"></i
+                ><a href="tel:0357511936">0357511936</a>
+              </p>
+              <p>
+                <i class="con-icon ti-email"></i
+                ><a href="mailto:manhkien1005@gmail.com"
+                  >manhkien1005@gmail.com</a
+                >
+              </p>
             </div>
             <div class="col col-2">
               <form action="">
@@ -301,6 +309,7 @@
     <script>
       var head = document.getElementById("header");
       var menu = document.getElementById("ti-menu");
+      // Đóng mở mobile menu
       menu.onclick = function () {
         var isClosed = head.clientHeight === 46;
         if (isClosed) {
@@ -309,6 +318,14 @@
           head.style.height = "46px";
         }
       };
+      // Đóng menu sau khi chọn 1 option
+      var options = document.querySelectorAll('.nav li a[href*="#"]');
+      for (var i = 0; i < options.length; i++) {
+        var option = options[i];
+        option.onclick = function (e) {
+          head.style.height = "46px";
+        };
+      }
     </script>
   </body>
 </html>
