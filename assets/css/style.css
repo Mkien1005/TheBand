@@ -101,6 +101,7 @@ ul {
     font-size: 12px;
 }
 
+.header .ti-menu,
 .header .search-btn {
     float: right;
     height: 46px;
@@ -111,16 +112,30 @@ ul {
     padding: 0 21px;
 }
 
-.header .search-btn:hover {
-    cursor: pointer;
-    background-color: #f44336;
-}
-
 .header .search-icon {
     color: #fff;
     font-size: 20px;
     line-height: 46px;
 }
+
+.header .ti-menu {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+    display: none;
+}
+
+.header .search-btn:hover {
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+.header .ti-menu:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+
 
 .slider {
     /* min-height: 800px;
@@ -409,18 +424,18 @@ a {
 }
 
 .col-full {
-    width: 400px;
+    width: 100%;
     margin-top: 8px;
 }
 
 .contact-body {
     height: 200px;
     padding-top: 30px;
+    overflow: hidden;
 }
 
 .contact-input {
     display: block;
-    width: 100%;
     padding: 10px !important;
     border: 1px solid #ccc;
 }
@@ -490,3 +505,37 @@ a {
         width: 100%;
     }
 } */
+@media (max-width: 740px) {
+    .search-btn {
+        display: none;
+    }
+
+    .contact-input {
+        width: 100%;
+    }
+
+    .mob {
+        width: 100%;
+    }
+
+    .col-full {
+        margin-top: 0;
+    }
+
+    .send {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .nav li {
+        display: block;
+    }
+
+    .header {
+        overflow: hidden;
+    }
+
+    .header .ti-menu {
+        display: block;
+    }
+}
