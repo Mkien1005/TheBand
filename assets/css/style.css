@@ -38,6 +38,7 @@ ul {
 }
 
 .header {
+    position: fixed;
     height: 46px;
     width: 100% !important;
     background-color: #000;
@@ -527,8 +528,16 @@ a {
         margin-right: 0;
     }
 
+    .nav {
+        display: block;
+    }
+
     .nav li {
         display: block;
+    }
+
+    .nav li:first-child {
+        display: inline-block;
     }
 
     .header {
@@ -537,5 +546,34 @@ a {
 
     .header .ti-menu {
         display: block;
+    }
+
+    .no-li {
+        display: none !important;
+    }
+
+    #ti-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .col-2 {
+        width: 100%;
+    }
+
+    .contact-body {
+        height: auto;
+    }
+
+    .infor {
+        line-height: 32px;
+        margin-bottom: 16px;
+    }
+
+    .send {
+        width: 100%;
+        margin-top: 16px;
+        padding: 14px 12px;
     }
 }
