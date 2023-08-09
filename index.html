@@ -13,7 +13,7 @@
   <body>
     <div class="wrapper">
       <!-- Header -->
-      <div class="header">
+      <div class="header" id="header">
         <!-- Start Nav -->
         <ul class="nav">
           <li><a href="#">Home</a></li>
@@ -34,9 +34,10 @@
         </ul>
         <!-- End Navbar-->
         <!-- Start Search btn -->
-        <button type="submit" class="search-btn">
+        <button type="submit" id="search-btn" class="search-btn">
           <span class="ti-search search-icon"></span>
         </button>
+        <button class="ti-menu" id="ti-menu"></button>
         <!-- End Search btn -->
       </div>
 
@@ -173,12 +174,12 @@
             <div class="col col-2 infor">
               <p><i class="con-icon ti-location-pin"></i>Chicago, US</p>
               <p><i class="con-icon ti-mobile"></i>0357511936</p>
-              <p><i class="con-icon ti-email"></i>manhkien1005@gmail.com</p>
+              <p><i class="con-icon ti-email"></i>mkien1005@gmail.com</p>
             </div>
             <div class="col col-2">
               <form action="">
                 <div class="row">
-                  <div class="col col-half">
+                  <div class="col col-2 mob">
                     <input
                       type="text"
                       name="name"
@@ -187,7 +188,8 @@
                       class="contact-input"
                     />
                   </div>
-                  <div class="col col-half">
+                  <div class="clear"></div>
+                  <div class="col col-2 mob">
                     <input
                       type="email"
                       name="email"
@@ -295,6 +297,18 @@
         event.stopPropagation();
       });
       modal.addEventListener("click", hideModal);
+    </script>
+    <script>
+      var head = document.getElementById("header");
+      var menu = document.getElementById("ti-menu");
+      menu.onclick = function () {
+        var isClosed = head.clientHeight === 46;
+        if (isClosed) {
+          head.style.height = "auto";
+        } else {
+          head.style.height = "46px";
+        }
+      };
     </script>
   </body>
 </html>
